@@ -31,6 +31,7 @@ public class EmployeeService {
         // 파일처리
         String fileName = fileService.upload(empDto.getUploadFile() );
         if(fileName != null) employeeEntity.setProfileImage( fileName );
+        else employeeEntity.setProfileImage( "https://placehold.co/100x100");
 
         return employeeRepo.save( employeeEntity ).getEmpId() > 0;
     }

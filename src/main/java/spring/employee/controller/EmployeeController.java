@@ -9,12 +9,12 @@ import spring.employee.service.EmployeeService;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/employee")
-@CrossOrigin( value = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:5173")
 public class EmployeeController {
     private final EmployeeService employeeSvc;
 
     @PostMapping
-    public ResponseEntity<?> addEmp(@RequestBody EmployeeDto empDto){
+    public ResponseEntity<?> addEmp(@ModelAttribute EmployeeDto empDto){
         return ResponseEntity.ok( employeeSvc.addEmp( empDto ) );
     }
 

@@ -9,7 +9,7 @@ import spring.department.service.DepartmentService;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/department")
-@CrossOrigin( value = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:5173")
 public class DepartmentController {
     private final DepartmentService departmentSvc;
 
