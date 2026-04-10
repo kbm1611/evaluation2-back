@@ -56,7 +56,6 @@ public class EmployeeService {
     // 사원 수정
     public boolean updEmp(EmployeeDto empDto){
         Optional<EmployeeEntity> optional = employeeRepo.findById( empDto.getEmp_id() );
-        DepartmentEntity departmentEntity = departmentRepo.findByDeptName(empDto.getDept_name());
 
         if(optional.isPresent()){
             EmployeeEntity employeeEntity = optional.get();
