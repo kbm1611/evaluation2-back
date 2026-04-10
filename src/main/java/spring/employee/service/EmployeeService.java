@@ -61,9 +61,7 @@ public class EmployeeService {
         if(optional.isPresent()){
             EmployeeEntity employeeEntity = optional.get();
             employeeEntity.setEmpName(empDto.getEmp_name());
-            employeeEntity.setPosition(employeeEntity.getPosition());
-            employeeEntity.setDepartmentEntity(departmentEntity);
-            employeeEntity.setProfileImage(employeeEntity.getProfileImage());
+            employeeEntity.setPosition(empDto.getPosition());
             return true;
         }
         return false;
